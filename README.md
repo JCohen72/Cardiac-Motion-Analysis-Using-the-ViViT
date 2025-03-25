@@ -1,6 +1,6 @@
 # Automated Cardiac Motion Analysis using ViViT
 
-This repository implements a regression-based adaptation of the Video Vision Transformer (ViViT) for automated cardiac motion analysis. Our goal is to predict continuous physiological curves from cine myocardial mask video sequences, thereby offering a non-invasive and efficient tool for cardiac function assessment.
+This repository implements a regression-based adaptation of the Video Vision Transformer (ViViT) for automated cardiac motion analysis. The goal was to predict continuous physiological curves from cine myocardial mask video sequences, thereby offering a non-invasive and efficient tool for cardiac function assessment.
 
 ---
 
@@ -39,11 +39,11 @@ This project adapts the original ViViT model (designed for video classification)
   - **Efficiency Variants:**  
     The original work also explores factorized approaches to reduce the quadratic complexity of self-attention.
 
-For an in-depth understanding, please refer to the original [ViViT Paper](./ViViT_Paper.pdf).
+For an in-depth understanding, please refer to the original [ViViT Paper](./References/ViViT_Paper.pdf) in the References folder.
 
-### Our Adaptation
+### The Adaptation
 
-Our adaptation leverages the ViViT architecture for regression rather than classification. The accompanying paper, [Automated Cardiac Motion Analysis Using ViViT: A Regression Approach for Predicting Physiological Parameters](./ViViT_Cardiac_Motion_Analysis.pdf), details the modifications and experimental outcomes.
+The adaptation leverages the ViViT architecture for regression rather than classification. The accompanying paper, [Automated Cardiac Motion Analysis Using ViViT: A Regression Approach for Predicting Physiological Parameters](./References/ViViT_Cardiac_Motion_Analysis.pdf) in the References folder, details the modifications and experimental outcomes.
 
 ---
 
@@ -56,6 +56,8 @@ Our adaptation leverages the ViViT architecture for regression rather than class
   - Cropped cine myocardial masks (dimensions: T × H × W).
   - Corresponding target time-series curves (TOS) representing physiological signals.
 
+**Note:** The file couldn't be uploaded to Github due to storage constraints.
+
 - **Normalization & Standardization:**  
   - **Masks:** Pixel values are normalized to the [0, 1] range.
   - **Targets:** Min–max normalization is applied to the TOS curves.
@@ -66,7 +68,7 @@ Our adaptation leverages the ViViT architecture for regression rather than class
 
 ### Model Architecture
 
-Our ViViT-based regression model consists of four primary components:
+The ViViT-based regression model consists of four primary components:
 
 1. **Patch Embedding:**  
    - Each video frame is divided into non-overlapping patches (16×16 pixels).  
@@ -108,8 +110,10 @@ I ran the code using UVA's Supercomputer Rivanna. This high-performance computin
 
 ### Training Dynamics
 - **Convergence:**  
-  - The training and validation loss curves (see `training_validation_loss.png`) demonstrate a rapid decrease within the first 50 epochs and stabilize well before 200 epochs.
-  - MAE curves (see `training_validation_mae.png`) indicate that both training and validation MAE fall below 0.1 around epoch 50, eventually approaching 0.015 by the end of training.
+  - The training and validation loss curves (see `training_validation_loss.png` in the Results folder or below) demonstrate a rapid decrease within the first 50 epochs and stabilize well before 200 epochs.
+  - MAE curves (see `training_validation_mae.png` in the Results folder or below) indicate that both training and validation MAE fall below 0.1 around epoch 50, eventually approaching 0.015 by the end of training.
+  - The ground truth vs. predictions plot (see `GroundTruthVsPredictions.png` in the Results folder or below) shows how closely the model’s predictions align with the actual (ground truth) physiological signal across sample indices. The strong overlap between the two curves indicates that the model accurately captures both the amplitude and the overall shape of the target signal.
+  - The residuals, the true value minus predicted value (see `Residuals.png` in the Results folder or below), are plotted for each sample index, with a dashed red line marking zero residual (perfect prediction). Most points cluster tightly around this line, indicating minimal errors and demonstrating the model’s robust predictive performance.
 
 ### Model Performance Metrics
 - **Final Evaluation Scores on Validation Set:**  
@@ -122,26 +126,26 @@ I ran the code using UVA's Supercomputer Rivanna. This high-performance computin
 
 - **Training & Validation MAE:**
 
-  ![Training and Validation MAE](./training_validation_mae.png)
+  ![Training and Validation MAE](./Results/training_validation_mae.png)
 
 - **Training & Validation Loss:**
 
-  ![Training and Validation Loss](./training_validation_loss.png)
+  ![Training and Validation Loss](./Results/training_validation_loss.png)
 
 - **Sample Prediction Visualizations:**  
   The visualizations below illustrate comparisons between ground truth and predicted signals, as well as residual plots.
 
-  ![Ground Truth vs. Predictions](./GroundTruthVsPredictions.png)  
-  ![Residuals](./Residuals.png)  
+  ![Ground Truth vs. Predictions](./Results/GroundTruthVsPredictions.png)  
+  ![Residuals](./Results/Residuals.png)  
 
 ---
 
 ## References
 
-- [ViViT: A Video Vision Transformer](./ViViT_Paper.pdf)
+- [ViViT: A Video Vision Transformer](./References/ViViT_Paper.pdf)
 
   Anurag Arnab, Mostafa Dehghani, et al. (2021).  
 
-- [Automated Cardiac Motion Analysis Using ViViT: A Regression Approach for Predicting Physiological Parameters](./ViViT_Cardiac_Motion_Analysis.pdf)
+- [Automated Cardiac Motion Analysis Using ViViT: A Regression Approach for Predicting Physiological Parameters](./References/ViViT_Cardiac_Motion_Analysis.pdf)
 
   Joseph Cohen (2024).  
