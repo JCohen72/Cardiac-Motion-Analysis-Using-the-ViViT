@@ -41,9 +41,9 @@ This project adapts the original ViViT model (designed for video classification)
 
 For an in-depth understanding, please refer to the original [ViViT Paper](./References/ViViT_Paper.pdf) in the References folder.
 
-### The Adaptation
+### My Adaptation
 
-The adaptation leverages the ViViT architecture for regression rather than classification. The accompanying paper, [Automated Cardiac Motion Analysis Using ViViT: A Regression Approach for Predicting Physiological Parameters](./References/ViViT_Cardiac_Motion_Analysis.pdf) in the References folder, details the modifications and experimental outcomes.
+My adaptation leverages the ViViT architecture for regression rather than classification. The accompanying paper, [Automated Cardiac Motion Analysis Using ViViT: A Regression Approach for Predicting Physiological Parameters](./References/ViViT_Cardiac_Motion_Analysis.pdf) in the References folder, details the modifications and experimental outcomes.
 
 ---
 
