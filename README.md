@@ -110,10 +110,10 @@ I ran the code using UVA's Supercomputer Rivanna. This high-performance computin
 
 ### Training Dynamics
 - **Convergence:**  
-  - The training and validation loss curves (see `training_validation_loss.png` in the Results folder or below) demonstrate a rapid decrease within the first 50 epochs and stabilize well before 200 epochs.
-  - MAE curves (see `training_validation_mae.png` in the Results folder or below) indicate that both training and validation MAE fall below 0.1 around epoch 50, eventually approaching 0.015 by the end of training.
-  - The ground truth vs. predictions plot (see `GroundTruthVsPredictions.png` in the Results folder or below) shows how closely the model’s predictions align with the actual (ground truth) physiological signal across sample indices. The strong overlap between the two curves indicates that the model accurately captures both the amplitude and the overall shape of the target signal.
-  - The residuals, the true value minus predicted value (see `Residuals.png` in the Results folder or below), are plotted for each sample index, with a dashed red line marking zero residual (perfect prediction). Most points cluster tightly around this line, indicating minimal errors and demonstrating the model’s robust predictive performance.
+  - The training and validation loss curves (see `training_validation_loss.png` in the Results folder or shown below) demonstrate a rapid decrease within the first 50 epochs and stabilize well before 200 epochs.
+  - MAE curves (see `training_validation_mae.png` in the Results folder or shown below) indicate that both training and validation MAE fall below 0.1 around epoch 50, eventually approaching 0.015 by the end of training.
+  - The ground truth vs. predictions plot (see `GroundTruthVsPredictions.png` in the Results folder or shown below) shows how closely the model’s predictions align with the actual (ground truth) physiological signal across sample indices. The strong overlap between the two curves indicates that the model accurately captures both the amplitude and the overall shape of the target signal.
+  - The residuals, the true value minus the predicted value (see `Residuals.png` in the Results folder or shown below), are plotted for each sample index, with a dashed red line marking zero residual (perfect prediction). Most points cluster tightly around this line, indicating minimal errors and demonstrating the model’s robust predictive performance.
 
 ### Model Performance Metrics
 - **Final Evaluation Scores on Validation Set:**  
@@ -124,18 +124,20 @@ I ran the code using UVA's Supercomputer Rivanna. This high-performance computin
 
 ### Visualizations
 
+- **Training & Validation Loss:**
+
+  ![Training and Validation Loss](./Results/training_validation_loss.png)
+  
 - **Training & Validation MAE:**
 
   ![Training and Validation MAE](./Results/training_validation_mae.png)
 
-- **Training & Validation Loss:**
-
-  ![Training and Validation Loss](./Results/training_validation_loss.png)
-
-- **Sample Prediction Visualizations:**  
-  The visualizations below illustrate comparisons between ground truth and predicted signals, as well as residual plots.
-
+- **Ground Truth vs. Predicted Signals:**
+  
   ![Ground Truth vs. Predictions](./Results/GroundTruthVsPredictions.png)  
+
+- **Residual Plots:**
+
   ![Residuals](./Results/Residuals.png)  
 
 ---
