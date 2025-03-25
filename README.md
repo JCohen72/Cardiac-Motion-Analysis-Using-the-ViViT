@@ -138,8 +138,8 @@ I ran the code using UVA's Supercomputer Rivanna. This high-performance computin
 
 ## References
 
-- ![ViViT: A Video Vision Transformer] (./ViViT_Paper.pdf)
+- [ViViT: A Video Vision Transformer](./ViViT_Paper.pdf)
   Anurag Arnab, Mostafa Dehghani, et al. (2021).  
 
-- ![Automated Cardiac Motion Analysis Using ViViT: A Regression Approach for Predicting Physiological Parameters] (./ViViT_Cardiac_Motion_Analysis.pdf)
+- [Automated Cardiac Motion Analysis Using ViViT: A Regression Approach for Predicting Physiological Parameters](./ViViT_Cardiac_Motion_Analysis.pdf)
   Joseph Cohen (2024).  
