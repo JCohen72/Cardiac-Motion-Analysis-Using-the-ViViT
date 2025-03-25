@@ -99,7 +99,8 @@ Our ViViT-based regression model consists of four primary components:
 ### Execution Environment
 
 **Code Execution:**
-I ran the code using UVA's Supercomputer Rivanna. This high-performance computing environment provided the robust resources necessary for efficient training and hyperparameter optimization of the ViViT-based regression model. Leveraging Rivanna allowed for rapid processing of large-scale cine myocardial mask video data and expedited the experimental workflow, ultimately contributing to the successful automated cardiac motion analysis.
+
+- I ran the code using UVA's Supercomputer Rivanna. This high-performance computing environment provided the robust resources necessary for efficient training and hyperparameter optimization of the ViViT-based regression model. Leveraging Rivanna allowed for rapid processing of large-scale cine myocardial mask video data and expedited the experimental workflow, ultimately contributing to the successful automated cardiac motion analysis.
 
 ---
 
