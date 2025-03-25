@@ -128,41 +128,6 @@ Our ViViT-based regression model consists of four primary components:
 
 ---
 
-## Usage
-
-### Installation
-
-Ensure you have Python 3.8 or higher installed. Then, install the required packages:
-```bash
-pip install tensorflow numpy matplotlib
-```
-
-### Running Training
-
-To train the model, execute:
-```bash
-python scripts/train.py
-```
-This script will:
-- Load the preprocessed dataset.
-- Build and compile the ViViT model.
-- Train the model for 200 epochs while logging training and validation performance.
-- Save output graphs (e.g., `training_validation_mae.png`, `training_validation_loss.png`) to the `outputs/` directory.
-
-### Evaluating the Model
-
-After training, run the evaluation script:
-```bash
-python scripts/evaluate.py
-```
-This script:
-- Loads a validation batch.
-- Generates predictions.
-- Plots the ground truth versus predictions along with residuals.
-- Computes additional metrics (percent error, R², relative accuracy).
-
----
-
 ## References
 
 - **ViViT: A Video Vision Transformer**  
